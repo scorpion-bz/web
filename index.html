@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>système d'exploitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cnt">
+        <h1>Système D'exploitation</h1>
+        <div class="page">
+            <ul>
+                <a href="def.html" id="1" class="link">
+                    <li>Définition</li>
+                </a>
+                <a href="type.html" class="link">
+                    <li>Types</li>
+                </a>
+                <a href="fonc.html" class="link">
+                    <li>Fonctionnalités</li>
+                </a>
+                <a href="emul.html" class="link">
+                    <li>Emulateurs</li>
+                </a>
+                <a href="sec.html" class="link">
+                    <li>Sécuriter</li>
+                </a>
+
+            </ul>
+            <iframe id="myFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            document.getElementById("1").click();
+        }
+        const links = document.querySelectorAll('.link');
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                const src = link.getAttribute('href');
+                document.getElementById('myFrame').src = src;
+            });
+        });
+    </script>
+</body>
+
+</html>
