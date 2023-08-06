@@ -1,0 +1,38 @@
+{
+    "tabnine.experimentalAutoImports": true,
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "[javascript]": {
+        "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+    },
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "bracketPairColorizer.depreciation-notice": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "explorer.confirmDelete": false,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "workbench.colorTheme": "Ayu Dark",
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "python.condaPath": "/home/scorpion/micromamba/condabin/conda",
+    "terminal.integrated.inheritEnv": false,
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.NoBrowser": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "editor.formatOnPaste": true,
+    "files.associations": {
+        "*.py": "python"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "settingsSync.ignoredSettings": [
+        
+    ]
+}
