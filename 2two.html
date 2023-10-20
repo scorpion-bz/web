@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Upload and Display</title>
+    <style>
+      #videoList video {
+        height: 25vh;
+        width: 30%;
+      }
+      #videoPlayer video {
+        height: 50vh;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload and View Videos</h1>
+    <input type="file" id="videoInput" accept="video/*" />
+    <button onclick="uploadVideo()">Upload Video</button>
+
+    <div id="videoList"></div>
+
+    <div id="videoPlayer"></div>
+
+    <script>
+      const videoList = document.getElementById("videoList");
+      const videoPlayer = document.getElementById("videoPlayer");
+
+      function uploadVideo() {
+        const input = document.getElementById("videoInput");
+        const file = input.files[0];
+
+        if (file) {
+          const video = document.createElement("video");
+          video.controls = true;
+          video.src = URL.createObjectURL(file);
+
+          videoList.appendChild(video);
+
+          video.addEventListener("click", function () {
+            videoPlayer.innerHTML = "";
+            const videoClone = video.cloneNode(true);
+            videoPlayer.appendChild(videoClone);
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
